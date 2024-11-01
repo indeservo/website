@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indeservo</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Indeservo Co.</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="new.css">
 </head>
-
 <body>
+    <header>
+        <div class="logo">
+            <img alt="Indeservo Co. Logo" src="/Resources/Logo.png"/>
+            <div class="title">Indeservo Co.</div>
+        </div>
+        <nav>
+            <a href="/team.html">Team</a>
+            <button id="applyButton">Apply</button>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/indeservo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/indeservo/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <div class="background"></div>
-        <div class="title">
-        <div class="name"><h1>Indeservo.co</h1></div>
-        <img src="Resources/Logo.png" alt="logo" class="logo">
+        <!-- Left Content -->
+        <div class="left-content">
+            <h1>EMPOWERING <span class="highlight">FREELANCERS</span>, ONE GIG AT A TIME.</h1>
+            <p><span class="bold">Coming</span>. <span class="bold">Very</span>. <span class="bold">Soon</span>.</p>
+            <div class="input-group">
+                <input style="background-color: rgb(196, 195, 194);" placeholder="Enter your email..." type="email"/>
+                <button>Join Waiting List</button>
+            </div>
         </div>
 
-        <div class="content">
-            <h1>Coming Soon</h1>
-            <p>Empowering <span>Freelancers,</span> One Gig at a Time.</p>
-            <div class="launch-time">
-                <div>
-                    <p id="days">00</p><br>
-                    <span>Days</span>
-                </div>
-                <div>
-                    <p id="hours">00</p><br>
-                    <span>Hours</span>
-                </div>
-                <div>
-                    <p id="minutes">00</p><br>
-                    <span>Minutes</span>
-                </div>
-                <div>
-                    <p id="seconds">00</p><br>
-                    <span>Seconds</span>
-                </div>
-            </div>
-            <br>
-            <button type="button" class="btn">Get Notified</button>
+        <!-- Right Content (Countdown) -->
+        <div class="right-content">
+            <div class="countdown-header">Launch Countdown</div>
+            <div class="countdown-time" id="countdownDisplay"></div>
         </div>
     </div>
 
-    <script>
-        var countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
-        
-        // Update the countdown every 1 second
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
+    <!-- Hiring Form Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Hiring Form</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Your Phone" required>
+            <input type="file" accept=".pdf, .doc, .docx" placeholder="Upload CV" required>
+            <select required>
+                <option value="" disabled selected>Select Position</option>
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Graphics Designer">Graphics Designer</option>
+                <option value="Full-stack">Full-stack</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Social Media Admin">Social Media Admin</option>
+            </select>
+            <button class="submit-button" id="submitButton">Submit</button>
+        </div>
+    </div>
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the elements with IDs
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-
-            // If the countdown is finished, display 00 for all values
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerHTML = "00";
-                document.getElementById("hours").innerHTML = "00";
-                document.getElementById("minutes").innerHTML = "00";
-                document.getElementById("seconds").innerHTML = "00";
-            }
-        }, 1000);
-    </script>
+<script src="new.js"></script>
 </body>
-
 </html>
