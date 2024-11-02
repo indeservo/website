@@ -12,16 +12,39 @@
         <div class="logo">
             <img alt="Indeservo Co. Logo" src="/Resources/Logo.png"/>
             <div class="title">Indeservo Co.</div>
+            <button id="menuToggle" class="menu-icon">&#9776;</button> <!-- Menu button next to logo -->
         </div>
+        
         <nav>
-            <a href="/team.html">Team</a>
-            <button id="applyButton">Apply</button>
+            <a href="/team.html" class="nav-link">Team</a>
+            <button id="applyButton" class="nav-link">Apply</button>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/company/indeservo/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/indeservo/" target="_blank"><i class="fab fa-instagram"></i></a>
-
             </div>
         </nav>
+        
+        <!-- Side Menu Structure -->
+        <div id="sideMenu" class="side-menu">
+            <button id="closeMenu" class="close-btn">&times;</button>
+            <div class="menu-section">
+                <h3 style="color: rgb(154, 154, 154); font-size: smaller;">Team</h3>
+                <a href="/team.html" class="side-link">Team</a>
+            </div>
+            <div class="menu-section">
+                <h3 style="color: rgb(154, 154, 154); font-size: smaller;">Jobs</h3>
+                <a href="#" id="applyButtonSide" class="side-link">Apply</a>
+            </div>
+            <div class="menu-section">
+                <h3 style="color: rgb(154, 154, 154); font-size: smaller;">Social Media</h3>
+                <div class="side-social-icons">
+                    <a style="margin-right: 10px; color: rgb(0, 0, 0);" href="https://www.linkedin.com/company/indeservo/" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <br/><br/>
+                    <a href="https://www.instagram.com/indeservo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+        
     </header>
 
     <div class="container">
@@ -64,6 +87,6 @@
         </div>
     </div>
 
-<script src="new.js"></script>
+    <script src="/new.js"></script>
 </body>
 </html>
