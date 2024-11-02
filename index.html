@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive viewport scaling -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Document Title -->
     <title>Indeservo Co.</title>
+    
+    <!-- Font Awesome icons and custom stylesheet link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="new.css">
 </head>
 <body>
     <header>
+        <!-- Logo and title section with menu button -->
         <div class="logo">
             <img alt="Indeservo Co. Logo" src="/Resources/Logo.png"/>
             <div class="title">Indeservo Co.</div>
             <button id="menuToggle" class="menu-icon">&#9776;</button> <!-- Menu button next to logo -->
         </div>
         
+        <!-- Main navigation links with social media icons -->
         <nav>
             <a href="/team.html" class="nav-link">Team</a>
             <button id="applyButton" class="nav-link">Apply</button>
@@ -24,7 +31,7 @@
             </div>
         </nav>
         
-        <!-- Side Menu Structure -->
+        <!-- Side menu structure for mobile view with close button and links -->
         <div id="sideMenu" class="side-menu">
             <button id="closeMenu" class="close-btn">&times;</button>
             <div class="menu-section">
@@ -47,8 +54,9 @@
         
     </header>
 
+    <!-- Main container for left content (text and input) and right content (countdown) -->
     <div class="container">
-        <!-- Left Content -->
+        <!-- Left Content: Headline and email input for waiting list -->
         <div class="left-content">
             <h1>EMPOWERING <span class="highlight">FREELANCERS</span>, ONE GIG AT A TIME.</h1>
             <p><span class="bold">Coming</span>. <span class="bold">Very</span>. <span class="bold">Soon</span>.</p>
@@ -58,22 +66,26 @@
             </div>
         </div>
 
-        <!-- Right Content (Countdown) -->
+        <!-- Right Content: Countdown timer display section -->
         <div class="right-content">
             <div class="countdown-header">Launch Countdown</div>
             <div class="countdown-time" id="countdownDisplay"></div>
         </div>
     </div>
 
-    <!-- Hiring Form Modal -->
+    <!-- Modal for job application form, initially hidden -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <h2>Hiring Form</h2>
+            
+            <!-- Form fields for user input: name, email, phone, CV upload, and position selection -->
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <input type="text" placeholder="Your Phone" required>
             <input type="file" accept=".pdf, .doc, .docx" placeholder="Upload CV" required>
+            
+            <!-- Dropdown menu for selecting job position -->
             <select required>
                 <option value="" disabled selected>Select Position</option>
                 <option value="Frontend">Frontend</option>
@@ -83,10 +95,12 @@
                 <option value="Marketing">Marketing</option>
                 <option value="Social Media Admin">Social Media Admin</option>
             </select>
+            
             <button class="submit-button" id="submitButton">Submit</button>
         </div>
     </div>
 
+    <!-- External JavaScript file for interactivity -->
     <script src="/new.js"></script>
 </body>
 </html>
