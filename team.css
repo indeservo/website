@@ -8,7 +8,7 @@ body{
     top: 5rem;
 }
 .heading b {
-    color: black;
+    color: #613EE9;
     -webkit-text-stroke: 0.7px white;
 }
 .members {
@@ -39,9 +39,10 @@ body{
     border-radius: 8rem;
 }
 .box p {
-    color: crimson;
-    font-weight: 600;
-    text-shadow: 1px -2px 20px #a70000;
+    color: #613EE9;
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-shadow: 1px -2px 20px #613EE9;
 }
 .back {
     position: absolute;
@@ -52,4 +53,17 @@ body{
 }
 .back:hover {
     transform: scale(1.1)
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: transparent;
 }
