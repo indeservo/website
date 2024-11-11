@@ -335,3 +335,19 @@ nav button:hover {
         display: block;
     }
 }
+
+footer {
+    position: relative; /* Or omit if not necessary */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.main-content {
+    flex: 1; /* Allows content to take up space and push footer to the bottom */
+}
