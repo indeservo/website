@@ -337,15 +337,17 @@ nav button:hover {
 }
 
 footer {
-    position: relative; /* Or omit if not necessary */
-    bottom: 0;
-    width: 100%;
+    background-color: transparent;
+    color: #eee;
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: white;
-    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9rem;
+    position: fixed; /* Ensures the footer stays fixed at the bottom */
 }
+
 
 
 .main-content {
