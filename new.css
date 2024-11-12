@@ -5,7 +5,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
     color: white;
     display: flex;
     align-items: center;
@@ -23,6 +22,7 @@ header {
     align-items: center;
     padding: 1.5rem;
     box-sizing: border-box;
+    z-index: 15; /* Higher than side menu and footer */
 }
 
 header .logo {
@@ -288,13 +288,13 @@ nav button:hover {
     height: 100%;
     width: 250px;
     background-color: #d1dff6;
-    
     border-radius: 10px;
     transition: right 0.3s;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+    z-index: 10; /* Higher than footer */
 }
 
 .side-menu.active {
@@ -335,7 +335,6 @@ nav button:hover {
         display: block;
     }
 }
-
 footer {
     background-color: transparent;
     color: #eee;
@@ -346,6 +345,7 @@ footer {
     left: 0;
     font-size: 0.9rem;
     position: fixed; /* Ensures the footer stays fixed at the bottom */
+    z-index: 5; /* Lower than the side menu */
 }
 
 
