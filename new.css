@@ -109,6 +109,10 @@ nav button:hover {
     color: #613EE9;
 }
 
+.left-content p .highlight {
+    color: #613EE9;
+}
+
 .left-content p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
