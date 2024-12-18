@@ -17,7 +17,7 @@ window.onclick = function (event) {
 
 // Countdown timer
 const countdownDisplay = document.getElementById("countdownDisplay");
-const launchDate = new Date("2025-01-01T00:00:00").getTime();
+const launchDate = new Date("2025-03-01T00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
