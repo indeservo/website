@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>-----</title>
+</head>
+<body>
+    <p>#define trigPin 9
+#define echoPin 8
+#define BUZ 13   // Buzzer pin
+
+long duration;
+int distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(BUZ, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Send ultrasonic pulse
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Read echo
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;  // convert to cm
+
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance > 0 && distance < 100) {  // only react within 1 meter
+    if (distance < 10) {
+      // Very close → continuous beep
+      digitalWrite(BUZ, HIGH);
+    } else {
+      // Otherwise → beep with delay based on distance
+      digitalWrite(BUZ, HIGH);
+      delay(50);
+      digitalWrite(BUZ, LOW);
+
+      // Beep interval increases with distance
+      int pause = map(distance, 10, 100, 100, 1000); 
+      delay(pause);
+    }
+  } else {
+    // Too far → buzzer off
+    digitalWrite(BUZ, LOW);
+  }
+}
+</p>
+</body>
+</html>
